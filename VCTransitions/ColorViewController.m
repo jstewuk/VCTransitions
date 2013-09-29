@@ -8,6 +8,7 @@
 
 #import "ColorViewController.h"
 #import "ColorViewControllerDelegate.h"
+#import "InteractiveSwipe.h"
 
 @interface ColorViewController () <ColorViewControllerDelegate>
 @property (nonatomic, strong) UIColor *color;
@@ -36,14 +37,22 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self wireUpInteraction];
+}
+
+- (void)wireUpInteraction {
+    id animator = [self.transitioningDelegate animationControllerForDismissedController:self];
+    id interactor = [self.transitioningDelegate interactionControllerForDismissal:animator];
     
+    if ( [interactor respondsToSelector:@selector(attachToViewController:)]) {
+        [interactor attachToViewController:self];
+    }
 }
 
 - (void)setupButton {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"Dismiss" forState:UIControlStateNormal];
-    //button.titleLabel.textColor = [UIColor blackColor];
-    //[button sizeToFit];
     [button addTarget:self action:@selector(dismissTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     button.translatesAutoresizingMaskIntoConstraints = NO;

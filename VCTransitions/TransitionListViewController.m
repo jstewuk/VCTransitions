@@ -10,12 +10,15 @@
 #import "ColorViewController.h"
 #import "ColorViewControllerDelegate.h"
 #import "SwatchTransition.h"
+#import "InteractiveSwipe.h"
 
 typedef NS_ENUM(NSInteger, TransitionType) {
     TransitionTypeSwatch = 0
 };
 
 @interface TransitionListViewController () <ColorViewControllerDelegate, UIViewControllerTransitioningDelegate>
+
+@property (nonatomic, strong) InteractiveSwipe *interactiveSwipe;
 
 @end
 
@@ -78,7 +81,7 @@ typedef NS_ENUM(NSInteger, TransitionType) {
 }
 
 - (void)viewControllerWasDismissed:(UIViewController *)viewController {
-    [viewController dismissViewControllerAnimated:YES completion:nil];
+    //[viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
@@ -97,5 +100,11 @@ typedef NS_ENUM(NSInteger, TransitionType) {
     return transition;
 }
 
+- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    if (!self.interactiveSwipe) {
+        self.interactiveSwipe = [[InteractiveSwipe alloc] init];
+    }
+    return self.interactiveSwipe;
+}
 
 @end

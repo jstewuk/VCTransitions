@@ -22,6 +22,7 @@
 		3854227017F6F8690039578B /* TransitionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854226F17F6F8690039578B /* TransitionListViewController.m */; };
 		3854227317F6FA940039578B /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854227217F6FA940039578B /* ColorViewController.m */; };
 		3854227717F719910039578B /* SwatchTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854227617F719910039578B /* SwatchTransition.m */; };
+		3854227A17F7BA290039578B /* InteractiveSwipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854227917F7BA290039578B /* InteractiveSwipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		3854227417F7055B0039578B /* ColorViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ColorViewControllerDelegate.h; path = ../ColorViewControllerDelegate.h; sourceTree = "<group>"; };
 		3854227517F719910039578B /* SwatchTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwatchTransition.h; sourceTree = "<group>"; };
 		3854227617F719910039578B /* SwatchTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwatchTransition.m; sourceTree = "<group>"; };
+		3854227817F7BA290039578B /* InteractiveSwipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSwipe.h; sourceTree = "<group>"; };
+		3854227917F7BA290039578B /* InteractiveSwipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveSwipe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				3854224617F6F7400039578B /* Supporting Files */,
 				3854227517F719910039578B /* SwatchTransition.h */,
 				3854227617F719910039578B /* SwatchTransition.m */,
+				3854227817F7BA290039578B /* InteractiveSwipe.h */,
+				3854227917F7BA290039578B /* InteractiveSwipe.m */,
 			);
 			path = VCTransitions;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				3854225017F6F7400039578B /* AppDelegate.m in Sources */,
 				3854227017F6F8690039578B /* TransitionListViewController.m in Sources */,
 				3854227717F719910039578B /* SwatchTransition.m in Sources */,
+				3854227A17F7BA290039578B /* InteractiveSwipe.m in Sources */,
 				3854227317F6FA940039578B /* ColorViewController.m in Sources */,
 				3854224C17F6F7400039578B /* main.m in Sources */,
 			);

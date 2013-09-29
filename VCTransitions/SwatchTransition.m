@@ -27,7 +27,7 @@ const CGFloat kSwatchDismissDuration = 0.25;
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     CGRect sourceRect = [transitionContext initialFrameForViewController:fromVC];
-    
+        
     CGAffineTransform rotation = CGAffineTransformMakeRotation(- M_PI / 2);
     
     UIView *container = [transitionContext containerView];
@@ -50,6 +50,7 @@ const CGFloat kSwatchDismissDuration = 0.25;
              [transitionContext completeTransition:YES];
          }];
     } else if (self.mode == SwatchTransitionModeDismiss) {
+        [toVC viewWillAppear:YES];
         [UIView
          animateWithDuration:kSwatchDismissDuration
          delay:0
@@ -57,8 +58,13 @@ const CGFloat kSwatchDismissDuration = 0.25;
          animations:^{
              fromVC.view.transform = rotation;
          } completion:^(BOOL finished) {
-             [fromVC.view removeFromSuperview];
-             [transitionContext completeTransition:YES];
+             if ([transitionContext transitionWasCancelled]) {
+                 [transitionContext completeTransition:NO];
+             } else {
+                 [fromVC.view removeFromSuperview];
+                 [toVC viewDidAppear:YES];
+                 [transitionContext completeTransition:YES];
+             }
          }];
     }
 }
