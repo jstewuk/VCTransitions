@@ -19,6 +19,9 @@
 		3854225B17F6F7400039578B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3854224317F6F7400039578B /* UIKit.framework */; };
 		3854226317F6F7400039578B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3854226117F6F7400039578B /* InfoPlist.strings */; };
 		3854226517F6F7400039578B /* VCTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854226417F6F7400039578B /* VCTransitionsTests.m */; };
+		3854227017F6F8690039578B /* TransitionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854226F17F6F8690039578B /* TransitionListViewController.m */; };
+		3854227317F6FA940039578B /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854227217F6FA940039578B /* ColorViewController.m */; };
+		3854227717F719910039578B /* SwatchTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3854227617F719910039578B /* SwatchTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,13 @@
 		3854226017F6F7400039578B /* VCTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		3854226217F6F7400039578B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3854226417F6F7400039578B /* VCTransitionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTransitionsTests.m; sourceTree = "<group>"; };
+		3854226E17F6F8690039578B /* TransitionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionListViewController.h; sourceTree = "<group>"; };
+		3854226F17F6F8690039578B /* TransitionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionListViewController.m; sourceTree = "<group>"; };
+		3854227117F6FA940039578B /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		3854227217F6FA940039578B /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		3854227417F7055B0039578B /* ColorViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ColorViewControllerDelegate.h; path = ../ColorViewControllerDelegate.h; sourceTree = "<group>"; };
+		3854227517F719910039578B /* SwatchTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwatchTransition.h; sourceTree = "<group>"; };
+		3854227617F719910039578B /* SwatchTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwatchTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +118,16 @@
 			isa = PBXGroup;
 			children = (
 				3854224E17F6F7400039578B /* AppDelegate.h */,
+				3854227417F7055B0039578B /* ColorViewControllerDelegate.h */,
 				3854224F17F6F7400039578B /* AppDelegate.m */,
+				3854226E17F6F8690039578B /* TransitionListViewController.h */,
+				3854226F17F6F8690039578B /* TransitionListViewController.m */,
+				3854227117F6FA940039578B /* ColorViewController.h */,
+				3854227217F6FA940039578B /* ColorViewController.m */,
 				3854225117F6F7400039578B /* Images.xcassets */,
 				3854224617F6F7400039578B /* Supporting Files */,
+				3854227517F719910039578B /* SwatchTransition.h */,
+				3854227617F719910039578B /* SwatchTransition.m */,
 			);
 			path = VCTransitions;
 			sourceTree = "<group>";
@@ -240,6 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3854225017F6F7400039578B /* AppDelegate.m in Sources */,
+				3854227017F6F8690039578B /* TransitionListViewController.m in Sources */,
+				3854227717F719910039578B /* SwatchTransition.m in Sources */,
+				3854227317F6FA940039578B /* ColorViewController.m in Sources */,
 				3854224C17F6F7400039578B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
